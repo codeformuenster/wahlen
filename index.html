@@ -23,9 +23,11 @@ title: Wahlbezirksucher
         </form>
         <form id="select">
           <select id="bezirk-nr" name="bezirk-nr">
-            <option value="1">Altstadt</option>
+            <option value="0">Wählen Sie Ihren Wahlbezirk aus</option>
+            {% for bezirk in site.data.wahlbezirke %}
+              <option value="{{forloop.index}}">{{forloop.index}} {{bezirk.title}}</option>
+            {% endfor %}
           </select>
-          <input type="button" value="Asuwählen" id="submit-select" />
         </form>
       </div>
     </div>
