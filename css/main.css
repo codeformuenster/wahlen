@@ -1,0 +1,189 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-color: #FFF;
+  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+h1 { margin-bottom: 1em; }
+p { margin: 1em 0; }
+
+a         { color: #00a; }
+a:hover   { color: #000; }
+a:visited { color: #a0a; }
+
+
+.site {
+  font-size: 115%;
+  text-align: justify;
+  width: 100%;
+  line-height: 1.5em;
+}
+
+.header a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+.footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.footer .contact {
+  float: left;
+  margin-right: 3em;
+}
+
+.footer .contact a {
+  color: #8085C1;
+}
+
+.footer .rss {
+  margin-top: 1.1em;
+  margin-right: -.2em;
+  float: right;
+}
+
+.footer .rss img {
+  border: 0;
+}
+#home {
+  margin: 0 auto;
+}
+#banner {
+  background: #c86957;
+  padding: 40px;
+}
+#banner h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  margin: 40px 0;
+}
+#bezirk-search {
+  border: 1px solid #555;
+  background: #4082a2;
+  color: #fff;
+  margin: 0 auto;
+  width: 390px;
+  overflow: auto;
+}
+#bezirk-search:after {
+  content:'';
+  display:block;
+  clear: both;
+}
+#bezirk-search #tabs{
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #555;
+  background: #eee;
+  color: #333;
+  display: none;
+}
+#bezirk-search #tabs li{
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  float: left;
+  background: #eee;
+}
+#bezirk-search #tabs li a{
+  color: #333;
+}
+#bezirk-search #tabs li.active a{
+  color: #fff;
+}
+#bezirk-search #tabs li.active{
+  background: #555;
+  color: #fff;
+}
+#bezirk-search #tabs:after {
+  content:'';
+  display:block;
+  clear: both;
+}
+#bezirk-search #bezirk-search-content {
+  margin: 10px 0 0 0;
+  padding: 0 30px 30px;
+  width: 300px;
+}
+#bezirk-search #bezirk-search-content:after {
+  content:'';
+  display:block;
+  clear: both;
+}
+#search input, #search label {
+  float: left;
+  clear: left;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+#search input {
+  width: 300px;
+  height: 30px;
+}
+#search #submit {
+  width: 100px;
+}
+#bezirk-search #select {
+  display: none;
+}
+#infos {
+  clear: left;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+}
+#infos:after {
+  content:'';
+  display:block;
+  clear: both;
+}
+
+#infos #last-results, #infos #candidates {
+  float: left;
+  width: 50%;
+}
+
+#infos #last-results ul li, #infos #candidates ul li{
+  list-style: none;
+}
+#loading {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left:45%;
+  height: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  background: rgba(200,200,200,0.9);
+}

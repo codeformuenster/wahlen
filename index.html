@@ -1,0 +1,68 @@
+---
+layout: default
+title: Wahlbezirksucher
+---
+
+<div id="home">
+  <div id="banner">
+    <h1>Wer stellt sich in meinem Wahlbezirk zur Wahl?</h1>
+    <h1>Wie wurde bisher in meinem Wahlbezirk abgestimmt?</h1>
+    <div id="bezirk-search">
+      <ul id="tabs">
+        <li data-type="1" class="active"><a href="#">Suche</a></li>
+        <li data-type="2" ><a href="#">Bezirk auswählen</a></li>
+      </ul>
+      <div id="bezirk-search-content">
+        <form id="search">
+          <h2>Suche meinen Wahlbezirk</h2>
+          <label for="strasse">Strasse</label>
+          <input type="text" name="strasse" placeholder="Geben Sie ihre Strasse ein" id="street"/>
+          <label for="hsnr">Hausnummer</label>
+          <input type="text" name="hsnr" placeholder="Hsnr" id="nr"/>
+          <input type="button" value="Suche" id="submit" />
+        </form>
+        <form id="select">
+          <select id="bezirk-nr" name="bezirk-nr">
+            <option value="1">Altstadt</option>
+          </select>
+          <input type="button" value="Asuwählen" id="submit-select" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="infos">
+    <h2>Ihr Wahlbezirk:<span id="wahlbezirk"></span></h2>
+    <div id="last-results">
+      <h2>Wahlergebnisse von 2009:</h2>
+      <div id="last-results-content"></div>
+      <a href="/wahlkarte">Alle Ergebnisse</a>
+    </div>
+    <div id="candidates">
+      <h2>Kandidaten für 2014</h2>
+      <div id="candidates-content"></div>
+      <a href="/kandidatenliste">Alle Kandidaten</a>
+    </div>
+  </div>
+</div>
+<div id="loading">Loading...</div>
+
+<script id="ergebnisse-template" type="text/x-handlebars-template">
+  <ul>
+    <% _.each( parties, function( party){ %>
+      <li>
+        <span><%- partyName(party.party) %></span>
+        <b><%- d3.round(party.percentage,1) %>% </b><span class="votes">(<%- party.votes %> Stimmen)</span>
+      </li>
+    <% }); %>
+  </ul>
+</script>
+<script id="kandidaten-template" type="text/x-handlebars-template">
+  <ul>
+    <% _.each( candidates, function(candidate){ %>
+      <li>
+        <span><%- candidate.Partei %></span>
+        <b><%- candidate.Vornamen %> <%- candidate.Familienname %></b>
+      </li>
+    <% }); %>
+  </ul>
+</script>

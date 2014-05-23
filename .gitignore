@@ -1,0 +1,10 @@
+*.gem
+pkg/
+*.swp
+*~
+_site/
+.bundle/
+.DS_Store
+site/_site/
+.ruby-version
+.sass-cache
