@@ -1,6 +1,6 @@
 # Wahlkarte
 
-Wahlergebnisse der Kommunalwahl 2014 in Münster
+Kandidaten der Kommunalwahl 2014 in Münster
 
 ## Über
 
